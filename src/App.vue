@@ -3,7 +3,7 @@
   <body id="page-top">
     <nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top" id="sideNav">
       <a class="navbar-brand js-scroll-trigger" href="#page-top">
-        <span class="d-block d-lg-none">Henrique Oliveira</span>
+        <span class="d-block d-lg-none">Professional Portfolio</span>
         <span class="d-none d-lg-block">
           <img
             class="img-fluid img-profile rounded-circle mx-auto mb-2"
@@ -38,10 +38,10 @@
             <a class="nav-link js-scroll-trigger" href="#skills">Skills</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link js-scroll-trigger" href="#interests">Interests</a>
+            <a class="nav-link js-scroll-trigger" href="#projects">Projects</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link js-scroll-trigger" href="#awards">Awards</a>
+            <a class="nav-link js-scroll-trigger" href="#interests">Interests</a>
           </li>
         </ul>
       </div>
@@ -51,16 +51,14 @@
       <section class="resume-section p-3 p-lg-5 d-flex align-items-center" id="about">
         <div class="w-100">
           <h1 class="mb-0">
-            Henrique
-            <span class="text-primary">Oliveira</span>
+            {{ name }}
+            <span class="text-primary">{{ surname }}</span>
           </h1>
           <div class="subheading mb-5">
-            (705) 790-0196 ·
-            <a href="mailto:hnrq.ornellas@gmail.com">hnrq.ornellas@gmail.com</a>
+            {{ address }}
+            <a href="mailto:name@email.com">{{ email }}</a>
           </div>
-          <p
-            class="lead mb-5"
-          >I am a Computer Programmer graduate from Georgian College. My program focused on developing scripting and query languages skills, including Java, JavaScript and SQL. In the last 2 years, I have learned how to design and manipulate applications and databases.</p>
+          <p class="lead mb-5">{{ aboutMe }}</p>
           <div class="social-icons">
             <a href="https://www.linkedin.com/in/henrique-oliveira-501a5a116/" target="_blank">
               <i class="fab fa-linkedin"></i>
@@ -78,47 +76,21 @@
       <hr class="m-0">
 
       <section class="resume-section p-3 p-lg-5 d-flex justify-content-center" id="experience">
-        <div class="w-100">
+        <div class="my-auto">
           <h2 class="mb-5">Experience</h2>
 
-          <div class="resume-item d-flex flex-column flex-md-row justify-content-between mb-5">
-            <div class="resume-content">
-              <h3 class="mb-0">Technology Analyst (co-op)</h3>
-              <div class="subheading mb-3">Bank of Montreal</div>
-              <p>● Planned and conducted software analysis for inclusion in project solutions</p>
-              <p>● Participated in reviews and inspections to ensure the quality of work products</p>
-              <p>● Prepared reports and/or graphs for tracking, trending and other reporting requirements</p>
-              <p>● Supported the execution of improvement initiatives using data-driven insights to deliver positive outcomes</p>
+          <div
+            class="resume-item d-flex flex-column flex-md-row mb-5"
+            v-for="job in experience"
+            :key="job.description"
+          >
+            <div class="resume-content mr-auto">
+              <h3 class="mb-0">{{ job.position }}</h3>
+              <div class="subheading mb-3">{{ job.company }}</div>
+              <p>{{ job.description }}</p>
             </div>
             <div class="resume-date text-md-right">
-              <span class="text-primary">Sep 2018 - Dec 2018</span>
-            </div>
-          </div>
-
-          <div class="resume-item d-flex flex-column flex-md-row justify-content-between mb-5">
-            <div class="resume-content">
-              <h3 class="mb-0">Survey Programmer (co-op)</h3>
-              <div class="subheading mb-3">The Logit Group</div>
-              <p>● Used control statements to manage survey flow</p>
-              <p>● Assured programming quality through extensive testing</p>
-              <p>● Edited survey layouts using HTML and CSS</p>
-              <p>● Provided feedback to managers regarding project status</p>
-            </div>
-            <div class="resume-date text-md-right">
-              <span class="text-primary">Aug 2017 - Dec 2017</span>
-            </div>
-          </div>
-
-          <div class="resume-item d-flex flex-column flex-md-row justify-content-between">
-            <div class="resume-content">
-              <h3 class="mb-0">Custodian</h3>
-              <div class="subheading mb-3">Town of Ajax</div>
-              <p>● Performed cleaning and related activities to keep exterior/interior of buildings organized</p>
-              <p>● Assisted with setup of facilities for meetings, conferences and events</p>
-              <p>● Locked/unlocked assigned buildings; secured facilities when not in use following predetermined routine</p>
-            </div>
-            <div class="resume-date text-md-right">
-              <span class="text-primary">Mar 2018 - Present</span>
+              <span class="text-primary">{{ job.startDate }} - {{ job.endDate }}</span>
             </div>
           </div>
         </div>
@@ -133,7 +105,7 @@
           <div class="resume-item d-flex flex-column flex-md-row justify-content-between mb-5">
             <div class="resume-content">
               <h3 class="mb-0">Georgian College</h3>
-              <div class="subheading mb-3">Computer Programmer</div>
+              <div class="subheading mb-3">Computer Programmer - Graduated with Honours</div>
               <p>GPA: 87</p>
             </div>
             <div class="resume-date text-md-right">
@@ -170,14 +142,16 @@
       <section class="resume-section p-3 p-lg-5 d-flex align-items-center" id="skills">
         <div class="w-100">
           <h2 class="mb-5">Skills</h2>
-
-          <div class="subheading mb-3">Programming Languages &amp; Tools</div>
+          <p class="subheading mb-3">Programming Languages &amp; Tools</p>
           <ul class="list-inline dev-icons">
             <li class="list-inline-item">
               <i class="devicon-java-plain-wordmark"></i>
             </li>
             <li class="list-inline-item">
               <i class="devicon-mysql-plain-wordmark"></i>
+            </li>
+            <li class="list-inline-item">
+              <i class="devicon-mongodb-plain-wordmark"></i>
             </li>
             <li class="list-inline-item">
               <i class="devicon-html5-plain-wordmark"></i>
@@ -200,6 +174,37 @@
 
       <hr class="m-0">
 
+      <section class="resume-section p-3 p-lg-5 d-flex align-items-center" id="projects">
+        <div class="w-100">
+          <h2 class="mb-5">Projects</h2>
+          <p>Click the images below to follow the links</p>
+
+          <div class="container">
+            <div class="row">
+              <div class="col-sm">
+                <a href="https://www.johnboddyhomes.com" target="_blank">
+                  <img
+                    src="../src/assets/jbh_thumbnail.png"
+                    alt="John Boddy Homes Website"
+                    class="img-thumbnail"
+                  >
+                </a>
+                <figcaption class="figure-caption">John Boddy Homes Website</figcaption>
+              </div>
+              <!-- http://s000.tinyupload.com/?del_id=07660950018026954757 -> to delete file -->
+              <div class="col-sm">
+                <a href="http://s000.tinyupload.com/?file_id=00009100766679264300" target="_blank">
+                  <img src="../src/assets/java.png" alt="Java Application" class="img-thumbnail">
+                </a>
+                <figcaption class="figure-caption">Java Application</figcaption>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <hr class="m-0">
+
       <section class="resume-section p-3 p-lg-5 d-flex align-items-center" id="interests">
         <div class="w-100">
           <h2 class="mb-5">Interests</h2>
@@ -207,20 +212,6 @@
           <p
             class="mb-0"
           >Also, I am a fan of books, movies and tv series. Sci-Fi, Fantasy, Investigation and History are the genres that interests me the most.</p>
-        </div>
-      </section>
-
-      <hr class="m-0">
-
-      <section class="resume-section p-3 p-lg-5 d-flex align-items-center" id="awards">
-        <div class="w-100">
-          <h2 class="mb-5">Awards</h2>
-          <ul class="fa-ul mb-0">
-            <li>
-              <i class="fa-li fa fa-trophy text-warning"></i>
-              Dean's List - Georgian College
-            </li>
-          </ul>
         </div>
       </section>
     </div>
@@ -232,7 +223,39 @@
 export default {
   data() {
     return {
-      title: "My portfolio"
+      title: "My Portfolio",
+      name: "HENRIQUE",
+      surname: "OLIVEIRA",
+      address: "(705) 790-0196 ·",
+      email: "hnrq.ornellas@gmail.com",
+      aboutMe:
+        "I am a Computer Programmer graduate from Georgian College. My program focused on developing scripting and query languages skills, including Java, JavaScript and SQL. In the last 2 years, I have learned how to design and manipulate applications and databases.",
+      experience: [
+        {
+          position: "Technology Analyst (CO-OP)",
+          company: "Bank of Montreal",
+          description:
+            "Planned and conducted software analysis for inclusion in project solutions;participated in reviews and inspections to ensure the quality of work products; prepared reports and/or graphs for tracking, trending and other reporting requirements; supported the execution of improvement initiatives using data-driven insights to deliver positive outcomes.",
+          startDate: "Aug 2018",
+          endDate: "Dec 2018"
+        },
+        {
+          position: "Survey Programmer",
+          company: "The Logit Group",
+          description:
+            "Used control statements to manage survey flow; assured programming quality through extensive testing; edited survey layouts using HTML and CSS; provided feedback to managers regarding project status.",
+          startDate: "Aug 2017",
+          endDate: "Dec 2017"
+        },
+        {
+          position: "Custodian",
+          company: "The Town of Ajax",
+          description:
+            "Performed cleaning and related activities to keep exterior/interior of buildings organized; assisted with setup of facilities for meetings, conferences and events; locked/unlocked assigned buildings; secured facilities when not in use following predetermined routine.",
+          startDate: "Mar 2018",
+          endDate: "Present"
+        }
+      ]
     };
   },
   mounted() {
@@ -260,11 +283,11 @@ export default {
           }
         }
       });
-      // Closes responsive menu when a scroll trigger link is clicked
+      //Closes responsive menu when a scroll trigger link is clicked
       $(".js-scroll-trigger").click(function() {
         $(".navbar-collapse").collapse("hide");
       });
-      // Activate scrollspy to add active class to navbar items on scroll
+      //Activate scrollspy to add active class to navbar items on scroll
       $("body").scrollspy({
         target: "#sideNav"
       });
@@ -348,7 +371,7 @@ p.lead {
 }
 
 .social-icons a:hover {
-  background-color: #11123E;
+  background-color: #11123e;
 }
 
 .dev-icons {
@@ -356,7 +379,7 @@ p.lead {
 }
 
 .dev-icons .list-inline-item i:hover {
-  color: #11123E;
+  color: #11123e;
 }
 
 #sideNav .navbar-nav .nav-item .nav-link {
@@ -452,15 +475,15 @@ section.resume-section .resume-item .resume-date {
 }
 
 .bg-primary {
-  background-color: #11123E !important;
+  background-color: #11123e !important;
 }
 
 .text-primary {
-  color: #11123E !important;
+  color: #11123e !important;
 }
 
 a {
-  color: #11123E;
+  color: #11123e;
 }
 
 a:hover,
