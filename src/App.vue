@@ -240,7 +240,7 @@ export default {
           endDate: "Dec 2018"
         },
         {
-          position: "Survey Programmer",
+          position: "Survey Programmer (CO-OP)",
           company: "The Logit Group",
           description:
             "Used control statements to manage survey flow; assured programming quality through extensive testing; edited survey layouts using HTML and CSS; provided feedback to managers regarding project status.",
