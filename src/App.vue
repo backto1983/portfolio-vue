@@ -182,7 +182,7 @@
           <div class="container">
             <div class="row">
               <div class="col-sm">
-                <a href="https://www.johnboddyhomes.ca" target="_blank">
+                <a href="http://www.johnboddyhomes.ca" target="_blank">
                   <img
                     src="../src/assets/jbh_thumbnail.png"
                     alt="John Boddy Homes Website"
