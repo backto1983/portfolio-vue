@@ -56,7 +56,7 @@
           </h1>
           <div class="subheading mb-5">
             {{ address }}
-            <a href="mailto:name@email.com">{{ email }}</a>
+            <a href="mailto:hnrq.ornellas@gmail.com">{{ email }}</a>
           </div>
           <p class="lead mb-5">{{ aboutMe }}</p>
           <div class="social-icons">
@@ -181,7 +181,7 @@
 
           <div class="container">
             <div class="row">
-              <div class="col-sm">
+              <div class="col-sm" style="padding: 20px">
                 <a href="http://www.johnboddyhomes.ca" target="_blank">
                   <img
                     src="../src/assets/jbh_thumbnail.png"
@@ -191,8 +191,9 @@
                 </a>
                 <figcaption class="figure-caption">John Boddy Homes Website</figcaption>
               </div>
+
               <!-- http://s000.tinyupload.com/?del_id=07660950018026954757 -> to delete file -->
-              <div class="col-sm">
+              <div class="col-sm" style="padding: 20px">
                 <a href="http://s000.tinyupload.com/?file_id=00009100766679264300" target="_blank">
                   <img src="../src/assets/java.png" alt="Java Application" class="img-thumbnail">
                 </a>
