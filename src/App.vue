@@ -192,9 +192,9 @@
                 <figcaption class="figure-caption">John Boddy Homes Website</figcaption>
               </div>
 
-              <!-- http://s000.tinyupload.com/?del_id=07660950018026954757 -> to delete file -->
+              <!-- http://s000.tinyupload.com/?del_id=60847736477016679853 -> to delete file -->
               <div class="col-sm" style="padding: 20px">
-                <a href="http://s000.tinyupload.com/?file_id=00009100766679264300" target="_blank">
+                <a href="http://s000.tinyupload.com/?file_id=10562675647165776775" target="_blank">
                   <img src="../src/assets/java.png" alt="Java Application" class="img-thumbnail">
                 </a>
                 <figcaption class="figure-caption">Java Application</figcaption>
